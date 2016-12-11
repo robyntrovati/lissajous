@@ -35,6 +35,8 @@ var config = {
   width: 800,
   height: 800,
   color: '#000',
+  strokeColor: '#000',
+  fillColor: '#000',
   strokeWidth: 0.5,
   maxCurves: 9,
   curveType: curveTypes.perlume,
@@ -49,8 +51,8 @@ var svg = d3.select('#lissajous').append('svg')
   .append('g');
 
 var curveSet = svg.append('path')
-  .attr('fill', 'none')
-  .attr('stroke', config.color)
+  .attr('fill', config.fillColor)
+  .attr('stroke', config.strokeColor)
   .attr('stroke-width', config.strokeWidth);
 
 var curves = 0.001;
